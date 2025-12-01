@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!tbody) return;
 
         const pendingRequests = mockRequests.filter(req => req.status === 'PENDING_MANAGER');
+
+        if (pendingRequests.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 20px; color: #888;">No pending requests</td></tr>';
+            return;
+        }
+
         tbody.innerHTML = pendingRequests.map(req => `
             <tr>
                 <td>
@@ -52,24 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     };
 
-    // Render HR Table (Shows ALL, Action on PENDING_HR)
+    // Render HR Table (Shows PENDING_HR)
     const renderHRTable = () => {
         const tbody = document.getElementById('hrTableBody');
         if (!tbody) return;
 
-        tbody.innerHTML = mockRequests.map(req => `
+        const pendingRequests = mockRequests.filter(req => req.status === 'PENDING_HR');
+
+        if (pendingRequests.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 20px; color: #888;">No pending approvals</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = pendingRequests.map(req => `
             <tr>
-                <td>${req.employee}</td>
+                <td>
+                    <div style="font-weight: 500;">${req.employee}</div>
+                    <small style="color: #666;">${req.role}</small>
+                </td>
                 <td>IT</td> <!-- Mock Dept -->
                 <td>${req.type}</td>
-                <td>${req.dates.split(' to ')[0]}</td>
-                <td>${req.dates.split(' to ')[1] || req.dates}</td>
+                <td>${req.dates}</td>
                 <td>${req.days}</td>
                 <td>${getStatusBadge(req.status)}</td>
                 <td>
-                    ${req.status === 'PENDING_HR' ?
-                `<button onclick="updateStatus(${req.id}, 'APPROVED')" class="btn" style="background: #00b894; color: white; border: none; padding: 5px 10px;">Finalize</button>` :
-                '-'}
+                    <button onclick="updateStatus(${req.id}, 'APPROVED')" class="btn" style="background: #00b894; color: white; border: none; padding: 5px 10px; margin-right: 5px;">Approve</button>
+                    <button onclick="updateStatus(${req.id}, 'REJECTED')" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 10px;">Reject</button>
                 </td>
             </tr>
         `).join('');
