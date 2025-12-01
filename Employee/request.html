@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Request Leave - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+        <span class="menu-category">MAIN</span>
+        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">LEAVE MANAGEMENT</span>
+        <a href="my-leave.html" class="menu-btn">My Leave <i class="fa-solid fa-folder-open"></i></a>
+        <a href="request.html" class="menu-btn active">Request Leave <i class="fa-solid fa-leaf"></i></a>
+        <a href="my-requests.html" class="menu-btn">My Requests <i class="fa-solid fa-life-ring"></i></a>
+        <span class="menu-category">GENERAL</span>
+        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">Request Leave (ขอลางาน)</div>
+            <div class="header-right">
+                <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>Somchai Jaidee</strong><span>Employee</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <h2>✏️ Submit Form</h2>
+                <div class="form-group">
+                    <label class="form-label">Type of Leave</label>
+                    <select class="form-control">
+                        <optgroup label="ลาหลัก">
+                            <option>Sick Leave (ลาป่วย) - 30 days left</option>
+                            <option>Personal Leave (ลากิจ) - 6 days left</option>
+                            <option>Vacation Leave (ลาพักร้อน) - 10 days left</option>
+                            <option>Maternity Leave (ลาคลอด) - 98 days left</option>
+                        </optgroup>
+                        <optgroup label="ลาอื่นๆ">
+                            <option>Paternity Leave (ลาดูแลภรรยาคลอดบุตร) - 15 days left</option>
+                            <option>Ordination Leave (ลาอุปสมบท) - 15 days left</option>
+                            <option>Military Service (ลาเกณฑ์ทหาร) - 60 days left</option>
+                            <option>Sterilization Leave (ลาทำหมัน) - As recommended</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Reason</label>
+                    <textarea class="form-control" rows="3" placeholder="โปรดระบุสาเหตุ..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Attachments</label>
+                    <div
+                        style="border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 8px; background: #fafafa; cursor: pointer;">
+                        <i class="fa-solid fa-cloud-arrow-up" style="font-size: 24px;"></i><br>Drag & Drop or Click to
+                        Upload
+                    </div>
+                </div>
+                <div style="text-align: right; margin-top: 20px;">
+                    <a href="index.html" class="btn">Cancel</a>
+                    <button class="btn btn-primary">Submit Request</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

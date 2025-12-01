@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Quotas - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+
+        <span class="menu-category">MAIN</span>
+        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+
+        <span class="menu-category">MANAGEMENT</span>
+        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
+        <a href="leave-quotas.html" class="menu-btn active">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+
+        <span class="menu-category">GENERAL</span>
+        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">Leave Quotas</div>
+            <div class="header-right">
+                <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+
+            <span class="menu-category">MAIN</span>
+
+            <div class="card">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Position Level</th>
+                                <th>Sick Leave</th>
+                                <th>Vacation Leave</th>
+                                <th>Personal Leave</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Junior / Entry Level</strong></td>
+                                <td>30 Days</td>
+                                <td>6 Days</td>
+                                <td>3 Days</td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
+                                            class="fa-solid fa-pen"></i> Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Senior / Specialist</strong></td>
+                                <td>30 Days</td>
+                                <td>10 Days</td>
+                                <td>5 Days</td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
+                                            class="fa-solid fa-pen"></i> Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Manager / Lead</strong></td>
+                                <td>30 Days</td>
+                                <td>15 Days</td>
+                                <td>7 Days</td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
+                                            class="fa-solid fa-pen"></i> Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Executive</strong></td>
+                                <td>30 Days</td>
+                                <td>20 Days</td>
+                                <td>10 Days</td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
+                                            class="fa-solid fa-pen"></i> Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Individual Adjustments</h3>
+            <div class="card">
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <div style="flex: 1;">
+                        <input type="text" class="form-control" placeholder="Search employee...">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <p style="color: #666; text-align: center; padding: 20px;">Search for an employee to adjust their
+                    specific quota.</p>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

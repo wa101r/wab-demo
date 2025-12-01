@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Reports - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+
+        <span class="menu-category">MAIN</span>
+        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+
+        <span class="menu-category">MANAGEMENT</span>
+        <a href="reports.html" class="menu-btn active">Reports <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
+        <a href="leave-quotas.html" class="menu-btn">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+
+        <span class="menu-category">GENERAL</span>
+        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">Leave Reports</div>
+            <div class="header-right">
+                <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <h1>All Leave History</h1>
+            <button class="btn btn-primary"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
+        </div>
+
+        <div class="card">
+            <div class="form-row" style="margin-bottom: 20px;">
+                <div style="flex: 1;">
+                    <label class="form-label">Date Range</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div style="flex: 1;">
+                    <label class="form-label">Department</label>
+                    <select class="form-control">
+                        <option>All Departments</option>
+                        <option>IT</option>
+                        <option>HR</option>
+                        <option>Marketing</option>
+                    </select>
+                </div>
+                <div style="flex: 1;">
+                    <label class="form-label">Status</label>
+                    <select class="form-control">
+                        <option>All Status</option>
+                        <option>Approved</option>
+                        <option>Pending</option>
+                        <option>Rejected</option>
+                    </select>
+                </div>
+                <div style="display: flex; align-items: flex-end;">
+                    <button class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Leave Type</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hrTableBody">
+                        <!-- Dynamic Content -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

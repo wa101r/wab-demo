@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+
+        <span class="menu-category">MAIN</span>
+        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+
+        <span class="menu-category">MANAGEMENT</span>
+        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
+        <a href="leave-quotas.html" class="menu-btn">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+
+        <span class="menu-category">GENERAL</span>
+        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn active">Notifications <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">Notifications</div>
+            <div class="header-right">
+                <a href="notifications.html" class="icon-btn" style="background:#eee;"><i
+                        class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <h3 style="margin-bottom: 20px;">Recent Alerts</h3>
+                <div class="noti-item unread">
+                    <div class="noti-icon" style="color: blue;"><i class="fa-solid fa-circle-info"></i></div>
+                    <div>
+                        <strong>System Update</strong>
+                        <p style="font-size: 14px; color: #555;">New leave policy has been applied.</p>
+                        <small style="color: #999;">1 day ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

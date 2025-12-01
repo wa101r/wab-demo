@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+
+        <span class="menu-category">MAIN</span>
+        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+
+        <span class="menu-category">MANAGEMENT</span>
+        <a href="approval.html" class="menu-btn">Approvals <i class="fa-solid fa-check-double"></i></a>
+        <a href="team-overview.html" class="menu-btn">Team Overview <i class="fa-solid fa-users-viewfinder"></i></a>
+
+        <span class="menu-category">GENERAL</span>
+        <a href="calendar.html" class="menu-btn active">Calendar <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">Calendar (ปฏิทิน)</div>
+            <div class="header-right">
+                <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>Manager Name</strong><span>Manager</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <button class="btn" id="prevMonthBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h2 id="currentMonthYear">November 2025</h2>
+                    <button class="btn" id="nextMonthBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 10px; font-size: 14px;">
+                    <label><input type="checkbox" checked> My Calendar</label>
+                    <label><input type="checkbox" checked> Team Calendar</label>
+                    <label><input type="checkbox" checked> Public Holidays Overlay</label>
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

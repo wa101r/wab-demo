@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Pause - Select Role</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+        }
+
+        .role-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .role-card {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 4px 4px 0px #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .role-icon {
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .role-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .role-desc {
+            color: #666;
+            font-size: 14px;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50px;
+            text-align: center;
+            width: 100%;
+            font-size: 36px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to D-Pause</h1>
+
+    <div class="role-container">
+        <a href="Employee/index.html" class="role-card">
+            <i class="fa-solid fa-user role-icon"></i>
+            <div class="role-title">Login as Employee</div>
+            <div class="role-desc">View quota, request leave, check status</div>
+        </a>
+
+        <a href="manager/index.html" class="role-card">
+            <i class="fa-solid fa-user-tie role-icon"></i>
+            <div class="role-title">Login as Manager</div>
+            <div class="role-desc">Approve requests, view team status</div>
+        </a>
+
+        <a href="hr/index.html" class="role-card">
+            <i class="fa-solid fa-users-gear role-icon"></i>
+            <div class="role-title">Login as HR</div>
+            <div class="role-desc">Manage employees, view reports</div>
+        </a>
+
+        <a href="admin/index.html" class="role-card">
+            <i class="fa-solid fa-shield-halved role-icon"></i>
+            <div class="role-title">Login as Admin</div>
+            <div class="role-desc">System settings, user management</div>
+        </a>
+    </div>
+
+</body>
+
+</html>
