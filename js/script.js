@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Mock Data & Workflow Logic
     const mockRequests = [
-        { id: 1, employee: "Somchai Jaidee", role: "Software Engineer", type: "Sick Leave", dates: "2025-12-02", days: "1 Day", reason: "Fever and headache", status: "PENDING_MANAGER", submitted: "2025-11-30" },
-        { id: 2, employee: "Jane Doe", role: "UX Designer", type: "Vacation", dates: "2025-12-10 to 2025-12-12", days: "3 Days", reason: "Family trip", status: "PENDING_MANAGER", submitted: "2025-11-28" },
-        { id: 3, employee: "Peter Parker", role: "Frontend Dev", type: "Personal", dates: "2025-12-05", days: "1 Day", reason: "Personal business", status: "APPROVED", submitted: "2025-11-25" },
-        { id: 4, employee: "Bruce Wayne", role: "Manager", type: "Sick Leave", dates: "2025-12-01", days: "1 Day", reason: "Flu", status: "REJECTED", submitted: "2025-11-29" },
-        { id: 5, employee: "Clark Kent", role: "Journalist", type: "Vacation", dates: "2025-12-20 to 2025-12-25", days: "5 Days", reason: "Holiday", status: "PENDING_HR", submitted: "2025-11-20" }
+        { id: 1, employee: "Somchai Jaidee", role: "Software Engineer", type: "Sick Leave", dates: "2025-12-02", days: "1 Day", reason: "Fever and headache", status: "PENDING_MANAGER", submitted: "2025-11-30", rejectionReason: "" },
+        { id: 2, employee: "Jane Doe", role: "UX Designer", type: "Vacation", dates: "2025-12-10 to 2025-12-12", days: "3 Days", reason: "Family trip", status: "PENDING_MANAGER", submitted: "2025-11-28", rejectionReason: "" },
+        { id: 3, employee: "Peter Parker", role: "Frontend Dev", type: "Personal", dates: "2025-12-05", days: "1 Day", reason: "Personal business", status: "APPROVED", submitted: "2025-11-25", rejectionReason: "" },
+        { id: 4, employee: "Bruce Wayne", role: "Manager", type: "Sick Leave", dates: "2025-12-01", days: "1 Day", reason: "Flu", status: "REJECTED", submitted: "2025-11-29", rejectionReason: "Short notice" },
+        { id: 5, employee: "Clark Kent", role: "Journalist", type: "Vacation", dates: "2025-12-20 to 2025-12-25", days: "5 Days", reason: "Holiday", status: "PENDING_HR", submitted: "2025-11-20", rejectionReason: "" }
     ];
 
     // Helper to get badge HTML
@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${req.dates} (${req.days})</td>
                 <td>${req.reason}</td>
                 <td>
+                    <button onclick="showDetails(${req.id})" class="btn" style="padding: 5px 10px; margin-right: 5px;" title="View Details"><i class="fa-regular fa-eye"></i></button>
                     <button onclick="updateStatus(${req.id}, 'PENDING_HR')" class="btn" style="background: #00b894; color: white; border: none; padding: 5px 15px; margin-right: 5px;">Approve</button>
-                    <button onclick="updateStatus(${req.id}, 'REJECTED')" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 15px;">Reject</button>
+                    <button onclick="initiateReject(${req.id})" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 15px;">Reject</button>
                 </td>
             </tr>
         `).join('');
@@ -82,8 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${req.days}</td>
                 <td>${getStatusBadge(req.status)}</td>
                 <td>
+                    <button onclick="showDetails(${req.id})" class="btn" style="padding: 5px 10px; margin-right: 5px;" title="View Details"><i class="fa-regular fa-eye"></i></button>
                     <button onclick="updateStatus(${req.id}, 'APPROVED')" class="btn" style="background: #00b894; color: white; border: none; padding: 5px 10px; margin-right: 5px;">Approve</button>
-                    <button onclick="updateStatus(${req.id}, 'REJECTED')" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 10px;">Reject</button>
+                    <button onclick="initiateReject(${req.id})" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 10px;">Reject</button>
                 </td>
             </tr>
         `).join('');
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${req.dates}</td>
                 <td>${getStatusBadge(req.status)}</td>
                 <td>
-                    <button style="border:none; background:none; cursor:pointer;" title="View"><i class="fa-regular fa-eye"></i></button>
+                    <button onclick="showDetails(${req.id})" style="border:none; background:none; cursor:pointer;" title="View"><i class="fa-regular fa-eye"></i></button>
                 </td>
             </tr>
         `).join('');
@@ -115,6 +117,74 @@ document.addEventListener('DOMContentLoaded', () => {
             req.status = newStatus;
             alert(`Request ID ${id} status updated to ${newStatus}`);
             // Re-render all tables
+            renderManagerTable();
+            renderHRTable();
+            renderEmployeeTable();
+            renderCalendar();
+        }
+    };
+
+    // --- Modal Logic ---
+    let currentRejectId = null;
+
+    window.showDetails = (id) => {
+        const req = mockRequests.find(r => r.id === id);
+        if (!req) return;
+
+        const modal = document.getElementById('detailsModal');
+        const content = document.getElementById('detailsContent');
+        if (!modal || !content) return;
+
+        let detailsHtml = `
+            <p><strong>Employee:</strong> ${req.employee}</p>
+            <p><strong>Role:</strong> ${req.role}</p>
+            <p><strong>Type:</strong> ${req.type}</p>
+            <p><strong>Dates:</strong> ${req.dates} (${req.days})</p>
+            <p><strong>Reason:</strong> ${req.reason}</p>
+            <p><strong>Status:</strong> ${getStatusBadge(req.status)}</p>
+            <p><strong>Submitted:</strong> ${req.submitted}</p>
+        `;
+
+        if (req.status === 'REJECTED' && req.rejectionReason) {
+            detailsHtml += `<p style="color: #ff4d4d; margin-top: 10px;"><strong>Rejection Reason:</strong> ${req.rejectionReason}</p>`;
+        }
+
+        content.innerHTML = detailsHtml;
+        modal.classList.add('active');
+    };
+
+    window.closeDetailsModal = () => {
+        document.getElementById('detailsModal').classList.remove('active');
+    };
+
+    window.initiateReject = (id) => {
+        currentRejectId = id;
+        const modal = document.getElementById('rejectModal');
+        if (modal) {
+            document.getElementById('rejectReason').value = ''; // Clear previous
+            modal.classList.add('active');
+        }
+    };
+
+    window.closeRejectModal = () => {
+        document.getElementById('rejectModal').classList.remove('active');
+        currentRejectId = null;
+    };
+
+    window.confirmReject = () => {
+        if (!currentRejectId) return;
+        const reason = document.getElementById('rejectReason').value;
+        if (!reason.trim()) {
+            alert("Please enter a reason for rejection.");
+            return;
+        }
+
+        const req = mockRequests.find(r => r.id === currentRejectId);
+        if (req) {
+            req.status = 'REJECTED';
+            req.rejectionReason = reason;
+            alert(`Request Rejected. Reason: ${reason}`);
+            closeRejectModal();
             renderManagerTable();
             renderHRTable();
             renderEmployeeTable();
