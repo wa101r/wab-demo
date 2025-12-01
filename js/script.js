@@ -59,19 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     };
 
-    // Render HR Table (Shows PENDING_HR)
+    // Render HR Table (Shows PENDING_HR and PENDING_MANAGER)
     const renderHRTable = () => {
         const tbody = document.getElementById('hrTableBody');
         if (!tbody) return;
 
-        const pendingRequests = mockRequests.filter(req => req.status === 'PENDING_HR');
+        // HR sees PENDING_HR (Actionable) and PENDING_MANAGER (View Only)
+        const hrRequests = mockRequests.filter(req => req.status === 'PENDING_HR' || req.status === 'PENDING_MANAGER');
 
-        if (pendingRequests.length === 0) {
+        if (hrRequests.length === 0) {
             tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 20px; color: #888;">No pending approvals</td></tr>';
             return;
         }
 
-        tbody.innerHTML = pendingRequests.map(req => `
+        tbody.innerHTML = hrRequests.map(req => {
+            const isActionable = req.status === 'PENDING_HR';
+            return `
             <tr>
                 <td>
                     <div style="font-weight: 500;">${req.employee}</div>
@@ -84,8 +87,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${getStatusBadge(req.status)}</td>
                 <td>
                     <button onclick="showDetails(${req.id})" class="btn" style="padding: 5px 10px; margin-right: 5px;" title="View Details"><i class="fa-regular fa-eye"></i></button>
+                    ${isActionable ? `
                     <button onclick="updateStatus(${req.id}, 'APPROVED')" class="btn" style="background: #00b894; color: white; border: none; padding: 5px 10px; margin-right: 5px;">Approve</button>
                     <button onclick="initiateReject(${req.id})" class="btn" style="background: #ff7675; color: white; border: none; padding: 5px 10px;">Reject</button>
+                    ` : `<span style="color:#999; font-size:12px;">Waiting for Manager</span>`}
+                </td>
+            </tr>
+            `;
+        }).join('');
+    };
+
+    // Render Admin Table (Shows ALL)
+    window.renderAdminTable = (filter = 'ALL') => {
+        const tbody = document.getElementById('adminTableBody');
+        if (!tbody) return;
+
+        let filteredRequests = mockRequests;
+        if (filter !== 'ALL') {
+            // Simple mapping for buttons
+            if (filter === 'PENDING') filteredRequests = mockRequests.filter(r => r.status.includes('PENDING'));
+            else filteredRequests = mockRequests.filter(r => r.status === filter);
+        }
+
+        if (filteredRequests.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 20px; color: #888;">No requests found</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = filteredRequests.map(req => `
+            <tr>
+                <td>#${req.id}</td>
+                <td>
+                    <div style="font-weight: 500;">${req.employee}</div>
+                </td>
+                <td>${req.role}</td>
+                <td>${req.type}</td>
+                <td>${req.dates}</td>
+                <td>${getStatusBadge(req.status)}</td>
+                <td>
+                    <button onclick="showDetails(${req.id})" class="btn" style="padding: 5px 10px;" title="View Details"><i class="fa-regular fa-eye"></i> View</button>
                 </td>
             </tr>
         `).join('');
@@ -120,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderManagerTable();
             renderHRTable();
             renderEmployeeTable();
+            renderAdminTable(); // Refresh admin table if open
             renderCalendar();
         }
     };
@@ -188,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderManagerTable();
             renderHRTable();
             renderEmployeeTable();
+            renderAdminTable();
             renderCalendar();
         }
     };
@@ -244,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderManagerTable();
     renderHRTable();
     renderEmployeeTable();
+    renderAdminTable(); // Initial call for Admin page
     renderCalendar();
 
     // Calendar Navigation (if exists)
