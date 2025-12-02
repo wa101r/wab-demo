@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>HR Dashboard - D-Pause</title>
+    <title>แดชบอร์ด HR - D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,103 +12,98 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn active">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn active">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="approvals-pending.html" class="menu-btn">รออนุมัติ <i class="fa-solid fa-clock"></i></a>
+        <a href="approvals-history.html" class="menu-btn">ประวัติการอนุมัติ <i class="fa-solid fa-history"></i></a>
 
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="approvals.html" class="menu-btn">Approvals <i class="fa-solid fa-check-double"></i></a>
-        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
-        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
-        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
-        <a href="leave-quotas.html" class="menu-btn">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+        <span class="menu-category">การจัดการ</span>
+        <a href="employees.html" class="menu-btn">พนักงาน <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">ประเภทการลา <i class="fa-solid fa-layer-group"></i></a>
+        <a href="leave-quotas.html" class="menu-btn">โควตาวันลา <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="reports.html" class="menu-btn">รายงาน <i class="fa-solid fa-file-invoice"></i></a>
 
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">HR Dashboard</div>
+            <div class="page-title">แดชบอร์ด HR</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+                <div class="user-info"><strong>HR Manager</strong><span>ฝ่ายบุคคล</span></div>
             </div>
         </header>
 
         <div class="content-body">
-            <h1 style="margin-bottom: 20px;">HR Overview</h1>
+            <h1 style="margin-bottom: 20px;">ภาพรวม HR</h1>
 
             <div class="quota-grid">
-                <div class="quota-card" style="border-color: #0984e3;">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">Total Employees</div><small>พนักงานทั้งหมด</small>
+                            <div style="font-weight:500;">พนักงานทั้งหมด</div><small>Total Employees</small>
                         </div>
                         <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-users"></i></div>
                     </div>
                     <div style="font-size:36px; font-weight:600; margin-top:10px;">120</div>
                 </div>
 
-                <div class="quota-card" style="border-color: #e17055;">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">On Leave Today</div><small>ลาวันนี้</small>
+                            <div style="font-weight:500;">ลาวันนี้</div><small>On Leave Today</small>
                         </div>
-                        <div class="card-icon" style="background: #e17055;"><i class="fa-solid fa-user-slash"></i></div>
+                        <div class="card-icon" style="background: #e74c3c;"><i class="fa-solid fa-user-slash"></i></div>
                     </div>
                     <div style="font-size:36px; font-weight:600; margin-top:10px;">5</div>
                 </div>
 
-                <div class="quota-card" style="border-color: #00b894;">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">Pending Requests</div><small>รอตรวจสอบ</small>
+                            <div style="font-weight:500;">รออนุมัติ</div><small>Pending Requests</small>
                         </div>
-                        <div class="card-icon" style="background: #00b894;"><i class="fa-solid fa-clipboard-check"></i>
-                        </div>
+                        <div class="card-icon" style="background: #fdcb6e;"><i class="fa-solid fa-clock"></i></div>
                     </div>
                     <div style="font-size:36px; font-weight:600; margin-top:10px;">8</div>
                 </div>
             </div>
 
             <div class="card">
-                <h3>Who is on leave today?</h3>
-                <div class="table-container" style="margin-top: 15px;">
+                <h3>คำขอล่าสุด</h3>
+                <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Employee</th>
-                                <th>Department</th>
-                                <th>Type</th>
-                                <th>Duration</th>
+                                <th>พนักงาน</th>
+                                <th>ประเภท</th>
+                                <th>วันที่</th>
+                                <th>สถานะ</th>
+                                <th>ดำเนินการ</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>John Smith</strong></td>
-                                <td>IT</td>
-                                <td><span class="status-badge" style="background:#ffeaa7; color:#d35400;">Sick
-                                        Leave</span></td>
-                                <td>1 Day</td>
+                                <td>สมชาย ใจดี</td>
+                                <td>ลาป่วย</td>
+                                <td>12 พ.ย. 2025</td>
+                                <td><span class="status-badge status-pending">รออนุมัติ</span></td>
+                                <td><button class="btn btn-primary"
+                                        onclick="window.location.href='approvals-pending.html'">ดูรายละเอียด</button>
+                                </td>
                             </tr>
                             <tr>
-                                <td><strong>Sarah Connor</strong></td>
-                                <td>Marketing</td>
-                                <td><span class="status-badge"
-                                        style="background:#81ecec; color:#00cec9;">Vacation</span>
-                                </td>
-                                <td>3 Days (Until 04 Dec)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Mike Ross</strong></td>
-                                <td>Legal</td>
-                                <td><span class="status-badge"
-                                        style="background:#fab1a0; color:#d63031;">Personal</span>
-                                </td>
-                                <td>1 Day</td>
+                                <td>วิไล รักดี</td>
+                                <td>ลาพักร้อน</td>
+                                <td>20-22 พ.ย. 2025</td>
+                                <td><span class="status-badge status-approved">อนุมัติแล้ว</span></td>
+                                <td><button class="btn" disabled>อนุมัติแล้ว</button></td>
                             </tr>
                         </tbody>
                     </table>

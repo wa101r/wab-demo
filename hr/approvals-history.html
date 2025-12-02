@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>รายงาน - HR D-Pause</title>
+    <title>ประวัติการอนุมัติ - HR D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -15,13 +15,14 @@
         <span class="menu-category">เมนูหลัก</span>
         <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
         <a href="approvals-pending.html" class="menu-btn">รออนุมัติ <i class="fa-solid fa-clock"></i></a>
-        <a href="approvals-history.html" class="menu-btn">ประวัติการอนุมัติ <i class="fa-solid fa-history"></i></a>
+        <a href="approvals-history.html" class="menu-btn active">ประวัติการอนุมัติ <i
+                class="fa-solid fa-history"></i></a>
 
         <span class="menu-category">การจัดการ</span>
         <a href="employees.html" class="menu-btn">พนักงาน <i class="fa-solid fa-users"></i></a>
         <a href="leave-types.html" class="menu-btn">ประเภทการลา <i class="fa-solid fa-layer-group"></i></a>
         <a href="leave-quotas.html" class="menu-btn">โควตาวันลา <i class="fa-solid fa-chart-pie"></i></a>
-        <a href="reports.html" class="menu-btn active">รายงาน <i class="fa-solid fa-file-invoice"></i></a>
+        <a href="reports.html" class="menu-btn">รายงาน <i class="fa-solid fa-file-invoice"></i></a>
 
         <span class="menu-category">ทั่วไป</span>
         <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
@@ -33,7 +34,7 @@
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">รายงานการลา</div>
+            <div class="page-title">ประวัติการอนุมัติ</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
                 <div class="user-info"><strong>HR Manager</strong><span>ฝ่ายบุคคล</span></div>
@@ -41,55 +42,52 @@
         </header>
 
         <div class="content-body">
-            <h1 style="margin-bottom: 20px;">รายงานประจำเดือน</h1>
-
-            <div class="quota-grid">
-                <div class="quota-card">
-                    <div style="display:flex; justify-content:space-between;">
-                        <div>
-                            <div style="font-weight:500;">วันลาทั้งหมด</div><small>เดือนนี้</small>
-                        </div>
-                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-chart-bar"></i></div>
-                    </div>
-                    <div style="font-size:36px; font-weight:600; margin-top:10px;">45 วัน</div>
-                </div>
-            </div>
+            <h1 style="margin-bottom: 20px;">ประวัติการอนุมัติ</h1>
+            <p style="color: #666; margin-bottom: 20px;">รายการคำขอที่ได้รับการอนุมัติหรือปฏิเสธแล้ว</p>
 
             <div class="card">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <h3>สรุปการลาตามแผนก</h3>
-                    <button class="btn btn-primary"><i class="fa-solid fa-download"></i> ส่งออก PDF</button>
-                </div>
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>แผนก</th>
-                                <th>ลาป่วย</th>
-                                <th>ลาพักร้อน</th>
-                                <th>รวม</th>
+                                <th>พนักงาน</th>
+                                <th>ประเภทการลา</th>
+                                <th>วันที่</th>
+                                <th>เหตุผล</th>
+                                <th>สถานะ</th>
+                                <th>ดำเนินการ</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>IT</td>
-                                <td>12</td>
-                                <td>20</td>
-                                <td>32</td>
-                            </tr>
-                            <tr>
-                                <td>HR</td>
-                                <td>5</td>
-                                <td>8</td>
-                                <td>13</td>
-                            </tr>
+                        <tbody id="hrHistoryTableBody">
+                            <!-- Populated by script.js logic for HISTORY -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="detailsModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeDetailsModal()">&times;</button>
+            <h3 class="modal-title">รายละเอียดคำขอ</h3>
+            <div class="modal-body" id="detailsContent">
+                <!-- Dynamic Details -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeDetailsModal()">ปิด</button>
+            </div>
+        </div>
+    </div>
+
     <script src="../js/script.js"></script>
+    <script>
+        // Override render function to show history (Approved/Rejected)
+        document.addEventListener('DOMContentLoaded', () => {
+            renderHRTable('HISTORY');
+        });
+    </script>
 </body>
 
 </html>

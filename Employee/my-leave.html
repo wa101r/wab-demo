@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Leave - D-Pause</title>
+    <title>วันลาคงเหลือ - D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -11,103 +11,90 @@
 <body>
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
-        <span class="menu-category">LEAVE MANAGEMENT</span>
-        <a href="my-leave.html" class="menu-btn active">My Leave <i class="fa-solid fa-folder-open"></i></a>
-        <a href="request.html" class="menu-btn">Request Leave <i class="fa-solid fa-leaf"></i></a>
-        <a href="my-requests.html" class="menu-btn">My Requests <i class="fa-solid fa-life-ring"></i></a>
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="request.html" class="menu-btn">ยื่นใบลา <i class="fa-solid fa-paper-plane"></i></a>
+        <a href="my-requests.html" class="menu-btn">ประวัติการลา <i class="fa-solid fa-list-check"></i></a>
+        <a href="my-leave.html" class="menu-btn active">วันลาคงเหลือ <i class="fa-solid fa-chart-pie"></i></a>
+
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">My Leave (ข้อมูลการลาของฉัน)</div>
+            <div class="page-title">วันลาคงเหลือ</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>Somchai Jaidee</strong><span>Employee</span></div>
+                <div class="user-info"><strong>สมชาย ใจดี</strong><span>พนักงาน</span></div>
             </div>
         </header>
 
         <div class="content-body">
-            <div class="card">
-                <h3><i class="fa-solid fa-chart-pie"></i> Leave Summary (สรุปสิทธิ์วันลา)</h3>
-                <table style="margin-top: 15px; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Leave Type</th>
-                            <th>Total Quota</th>
-                            <th>Used</th>
-                            <th>Remaining</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fa-solid fa-bed-pulse" style="color: #e74c3c; width: 20px;"></i> Sick Leave
-                                (ลาป่วย)</td>
-                            <td>30</td>
-                            <td>2</td>
-                            <td><strong style="color:green;">28</strong></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-briefcase" style="color: #3498db; width: 20px;"></i> Personal
-                                Leave (ลากิจ)</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td><strong style="color:orange;">4</strong></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-umbrella-beach" style="color: #f39c12; width: 20px;"></i> Vacation
-                                (พักร้อน)</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td><strong style="color:blue;">5</strong></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-baby-carriage" style="color: #9b59b6; width: 20px;"></i> Maternity
-                                (ลาคลอด)</td>
-                            <td>98</td>
-                            <td>0</td>
-                            <td><strong style="color:#9b59b6;">98</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h1 style="margin-bottom: 20px;">สิทธิ์วันลาของคุณ</h1>
 
-            <div class="card">
-                <h3><i class="fa-solid fa-clock-rotate-left"></i> Leave History (ประวัติการลา)</h3>
-                <p style="color:#666; font-size:14px; margin-bottom:15px;">รายการที่อนุมัติและสิ้นสุดแล้ว</p>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Type</th>
-                                <th>Duration</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15 Oct 2025</td>
-                                <td>Personal Leave</td>
-                                <td>1 Day</td>
-                                <td><span class="status-badge"
-                                        style="background:#55efc4; border:1px solid #00b894;">Completed</span></td>
-                            </tr>
-                            <tr>
-                                <td>10 Sep 2025</td>
-                                <td>Sick Leave</td>
-                                <td>1 Day</td>
-                                <td><span class="status-badge"
-                                        style="background:#55efc4; border:1px solid #00b894;">Completed</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="quota-grid">
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">ลาป่วย</div><small>Sick Leave</small>
+                        </div>
+                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>ใช้ไป: 2</span>
+                            <span>ทั้งหมด: 30</span>
+                        </div>
+                        <div style="background: #eee; height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="background: #0984e3; width: 6.6%; height: 100%;"></div>
+                        </div>
+                        <div style="margin-top: 10px; font-weight: 600;">คงเหลือ: 28 วัน</div>
+                    </div>
+                </div>
+
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">ลาพักร้อน</div><small>Vacation Leave</small>
+                        </div>
+                        <div class="card-icon" style="background: #00b894;"><i class="fa-solid fa-plane"></i></div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>ใช้ไป: 5</span>
+                            <span>ทั้งหมด: 10</span>
+                        </div>
+                        <div style="background: #eee; height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="background: #00b894; width: 50%; height: 100%;"></div>
+                        </div>
+                        <div style="margin-top: 10px; font-weight: 600;">คงเหลือ: 5 วัน</div>
+                    </div>
+                </div>
+
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">ลากิจ</div><small>Personal Leave</small>
+                        </div>
+                        <div class="card-icon" style="background: #fdcb6e;"><i class="fa-solid fa-briefcase"></i></div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>ใช้ไป: 1</span>
+                            <span>ทั้งหมด: 5</span>
+                        </div>
+                        <div style="background: #eee; height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="background: #fdcb6e; width: 20%; height: 100%;"></div>
+                        </div>
+                        <div style="margin-top: 10px; font-weight: 600;">คงเหลือ: 4 วัน</div>
+                    </div>
                 </div>
             </div>
         </div>

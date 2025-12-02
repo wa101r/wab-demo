@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>Team Overview - D-Pause</title>
+    <title>ภาพรวมทีม - Manager D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,111 +12,71 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="approval.html" class="menu-btn">อนุมัติคำขอ <i class="fa-solid fa-check-double"></i></a>
+        <a href="team-overview.html" class="menu-btn active">ภาพรวมทีม <i class="fa-solid fa-users"></i></a>
+        <a href="reports.html" class="menu-btn">รายงานทีม <i class="fa-solid fa-chart-line"></i></a>
 
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="approval.html" class="menu-btn">Approvals <i class="fa-solid fa-check-double"></i></a>
-        <a href="team-overview.html" class="menu-btn active">Team Overview <i
-                class="fa-solid fa-users-viewfinder"></i></a>
-
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทินทีม <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">Team Overview</div>
+            <div class="page-title">ภาพรวมทีม</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>Manager Name</strong><span>Manager</span></div>
+                <div class="user-info"><strong>Manager</strong><span>หัวหน้าแผนก IT</span></div>
             </div>
         </header>
 
         <div class="content-body">
-
+            <h1 style="margin-bottom: 20px;">สมาชิกในทีม</h1>
 
             <div class="card">
-                <h3>Team Members Status</h3>
-                <div class="table-container" style="margin-top: 15px;">
+                <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Employee</th>
-                                <th>Position</th>
-                                <th>Status Today</th>
-                                <th>Upcoming Leave</th>
+                                <th>ชื่อ-นามสกุล</th>
+                                <th>ตำแหน่ง</th>
+                                <th>สถานะวันนี้</th>
+                                <th>เบอร์โทรศัพท์</th>
+                                <th>อีเมล</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    <div style="font-weight: 500;">Somchai Jaidee</div>
-                                    <small style="color: #666;">Software Engineer</small>
+                                <td>สมชาย ใจดี</td>
+                                <td>Developer</td>
+                                <td><span class="status-badge" style="background:#00b894; color:white;">ทำงาน</span>
                                 </td>
-                                <td>Senior Dev</td>
-                                <td><span class="status-badge" style="background:#00b894; color:white;">Present</span>
-                                </td>
-                                <td>Sick Leave (Tomorrow)</td>
+                                <td>081-234-5678</td>
+                                <td>somchai@d-pause.com</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div style="font-weight: 500;">Jane Doe</div>
-                                    <small style="color: #666;">UX Designer</small>
-                                </td>
+                                <td>วิไล รักดี</td>
                                 <td>Designer</td>
-                                <td><span class="status-badge" style="background:#00b894; color:white;">Present</span>
+                                <td><span class="status-badge" style="background:#00b894; color:white;">ทำงาน</span>
                                 </td>
-                                <td>Vacation (Next Week)</td>
+                                <td>089-876-5432</td>
+                                <td>wilai@d-pause.com</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div style="font-weight: 500;">Peter Parker</div>
-                                    <small style="color: #666;">Frontend Dev</small>
+                                <td>มานะ อดทน</td>
+                                <td>Tester</td>
+                                <td><span class="status-badge" style="background:#e74c3c; color:white;">ลาป่วย</span>
                                 </td>
-                                <td>Junior Dev</td>
-                                <td><span class="status-badge" style="background:#e17055; color:white;">On Leave</span>
-                                </td>
-                                <td>-</td>
+                                <td>080-111-2222</td>
+                                <td>mana@d-pause.com</td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Team Calendar</h3>
-                <div class="calendar-grid">
-                    <div class="cal-header-cell">Sun</div>
-                    <div class="cal-header-cell">Mon</div>
-                    <div class="cal-header-cell">Tue</div>
-                    <div class="cal-header-cell">Wed</div>
-                    <div class="cal-header-cell">Thu</div>
-                    <div class="cal-header-cell">Fri</div>
-                    <div class="cal-header-cell">Sat</div>
-
-                    <!-- Week 1 -->
-                    <div class="cal-day" style="color:#ccc;">30</div>
-                    <div class="cal-day">1</div>
-                    <div class="cal-day">2 <span class="event-label" style="background:#ffeaa7;">Somchai (Sick)</span>
-                    </div>
-                    <div class="cal-day">3</div>
-                    <div class="cal-day">4</div>
-                    <div class="cal-day">5</div>
-                    <div class="cal-day">6</div>
-
-                    <!-- Week 2 -->
-                    <div class="cal-day">7</div>
-                    <div class="cal-day">8</div>
-                    <div class="cal-day">9</div>
-                    <div class="cal-day today">10 <span class="event-label" style="background:#fab1a0;">Peter
-                            (Leave)</span></div>
-                    <div class="cal-day">11</div>
-                    <div class="cal-day">12</div>
-                    <div class="cal-day">13</div>
                 </div>
             </div>
         </div>

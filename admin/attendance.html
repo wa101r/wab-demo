@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>การลงเวลา - ผู้ดูแลระบบ D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">กลับหน้าหลัก <i class="fa-solid fa-house"></i></a>
+
+        <span class="menu-category">การจัดการ</span>
+        <a href="all-requests.html" class="menu-btn">คำขอทั้งหมด <i class="fa-solid fa-list-check"></i></a>
+        <a href="attendance.html" class="menu-btn active">การลงเวลา <i class="fa-solid fa-clipboard-user"></i></a>
+        <a href="users.html" class="menu-btn">ผู้ใช้งาน <i class="fa-solid fa-users-gear"></i></a>
+        <a href="org-structure.html" class="menu-btn">โครงสร้างองค์กร <i class="fa-solid fa-sitemap"></i></a>
+        <a href="settings.html" class="menu-btn">ตั้งค่าระบบ <i class="fa-solid fa-sliders"></i></a>
+        <a href="logs.html" class="menu-btn">ประวัติการใช้งาน <i class="fa-solid fa-list-ol"></i></a>
+
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">การลงเวลาประจำวัน</div>
+            <div class="header-right">
+                <a href="#" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+                <div class="user-info"><strong>System Admin</strong><span>ผู้ดูแลระบบ</span></div>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 id="currentDateDisplay">วันนี้: 2 ธันวาคม 2025</h1>
+                <button class="btn btn-primary"><i class="fa-solid fa-download"></i> ส่งออกรายงาน</button>
+            </div>
+
+            <div class="quota-grid">
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">มาทำงาน</div><small>Present</small>
+                        </div>
+                        <div class="card-icon" style="background: #00b894;"><i class="fa-solid fa-user-check"></i></div>
+                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;" id="countPresent">0</div>
+                </div>
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">มาสาย</div><small>Late</small>
+                        </div>
+                        <div class="card-icon" style="background: #fdcb6e;"><i class="fa-solid fa-user-clock"></i></div>
+                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;" id="countLate">0</div>
+                </div>
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">ขาด / ลา</div><small>Absent / On Leave</small>
+                        </div>
+                        <div class="card-icon" style="background: #e74c3c;"><i class="fa-solid fa-user-xmark"></i></div>
+                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;" id="countAbsent">0</div>
+                </div>
+                <div class="quota-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <div style="font-weight:500;">พนักงานทั้งหมด</div><small>Total Employees</small>
+                        </div>
+                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-users"></i></div>
+                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;" id="countTotal">0</div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>รายชื่อพนักงานและการลงเวลา</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>พนักงาน</th>
+                                <th>แผนก</th>
+                                <th>เวลาเข้างาน</th>
+                                <th>สถานะ</th>
+                                <th>สถานที่</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceTableBody">
+                            <!-- Populated by script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

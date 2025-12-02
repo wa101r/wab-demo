@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>แดชบอร์ดหัวหน้างาน - D-Pause</title>
+    <title>รายงานทีม - Manager D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -13,10 +13,10 @@
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
         <span class="menu-category">เมนูหลัก</span>
-        <a href="index.html" class="menu-btn active">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
         <a href="approval.html" class="menu-btn">อนุมัติคำขอ <i class="fa-solid fa-check-double"></i></a>
         <a href="team-overview.html" class="menu-btn">ภาพรวมทีม <i class="fa-solid fa-users"></i></a>
-        <a href="reports.html" class="menu-btn">รายงานทีม <i class="fa-solid fa-chart-line"></i></a>
+        <a href="reports.html" class="menu-btn active">รายงานทีม <i class="fa-solid fa-chart-line"></i></a>
 
         <span class="menu-category">ทั่วไป</span>
         <a href="calendar.html" class="menu-btn">ปฏิทินทีม <i class="fa-regular fa-calendar"></i></a>
@@ -28,7 +28,7 @@
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">แดชบอร์ดหัวหน้างาน</div>
+            <div class="page-title">รายงานการลาของทีม</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
                 <div class="user-info"><strong>Manager</strong><span>หัวหน้าแผนก IT</span></div>
@@ -36,42 +36,35 @@
         </header>
 
         <div class="content-body">
-            <h1 style="margin-bottom: 20px;">ภาพรวมทีม</h1>
+            <h1 style="margin-bottom: 20px;">สรุปการลาของทีม</h1>
 
             <div class="quota-grid">
                 <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">สมาชิกในทีม</div><small>Team Members</small>
+                            <div style="font-weight:500;">ลาป่วยรวม</div><small>เดือนนี้</small>
                         </div>
-                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-users"></i></div>
+                        <div class="card-icon" style="background: #e74c3c;"><i class="fa-solid fa-notes-medical"></i>
+                        </div>
                     </div>
-                    <div style="font-size:36px; font-weight:600; margin-top:10px;">8</div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;">3 วัน</div>
                 </div>
-
                 <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">ลาวันนี้</div><small>On Leave Today</small>
+                            <div style="font-weight:500;">ลาพักร้อนรวม</div><small>เดือนนี้</small>
                         </div>
-                        <div class="card-icon" style="background: #e74c3c;"><i class="fa-solid fa-user-slash"></i></div>
+                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-plane"></i></div>
                     </div>
-                    <div style="font-size:36px; font-weight:600; margin-top:10px;">1</div>
-                </div>
-
-                <div class="quota-card">
-                    <div style="display:flex; justify-content:space-between;">
-                        <div>
-                            <div style="font-weight:500;">รออนุมัติ</div><small>Pending Requests</small>
-                        </div>
-                        <div class="card-icon" style="background: #fdcb6e;"><i class="fa-solid fa-clock"></i></div>
-                    </div>
-                    <div style="font-size:36px; font-weight:600; margin-top:10px;">2</div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;">10 วัน</div>
                 </div>
             </div>
 
             <div class="card">
-                <h3>คำขอล่าสุดจากทีม</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3>ประวัติการลาตามพนักงาน</h3>
+                    <button class="btn btn-primary"><i class="fa-solid fa-download"></i> ส่งออก CSV</button>
+                </div>
                 <div class="table-container">
                     <table>
                         <thead>
@@ -79,18 +72,21 @@
                                 <th>พนักงาน</th>
                                 <th>ประเภท</th>
                                 <th>วันที่</th>
-                                <th>สถานะ</th>
-                                <th>ดำเนินการ</th>
+                                <th>จำนวนวัน</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>สมชาย ใจดี</td>
                                 <td>ลาป่วย</td>
-                                <td>12 พ.ย. 2025</td>
-                                <td><span class="status-badge status-pending">รออนุมัติ</span></td>
-                                <td><button class="btn btn-primary"
-                                        onclick="window.location.href='approval.html'">ตรวจสอบ</button></td>
+                                <td>10 พ.ย. 2025</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>วิไล รักดี</td>
+                                <td>ลาพักร้อน</td>
+                                <td>15-17 พ.ย. 2025</td>
+                                <td>3</td>
                             </tr>
                         </tbody>
                     </table>

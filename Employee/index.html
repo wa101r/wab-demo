@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Employee Dashboard - D-Pause</title>
+    <title>แดชบอร์ดพนักงาน - D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,102 +12,95 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn active">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn active">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="request.html" class="menu-btn">ยื่นใบลา <i class="fa-solid fa-paper-plane"></i></a>
+        <a href="my-requests.html" class="menu-btn">ประวัติการลา <i class="fa-solid fa-list-check"></i></a>
+        <a href="my-leave.html" class="menu-btn">วันลาคงเหลือ <i class="fa-solid fa-chart-pie"></i></a>
 
-        <span class="menu-category">LEAVE MANAGEMENT</span>
-        <a href="my-leave.html" class="menu-btn">My Leave <i class="fa-solid fa-folder-open"></i></a>
-        <a href="request.html" class="menu-btn">Request Leave <i class="fa-solid fa-leaf"></i></a>
-        <a href="my-requests.html" class="menu-btn">My Requests <i class="fa-solid fa-life-ring"></i></a>
-
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">Employee Dashboard</div>
+            <div class="page-title">แดชบอร์ด</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>Somchai Jaidee</strong><span>Employee</span></div>
+                <div class="user-info"><strong>สมชาย ใจดี</strong><span>พนักงาน</span></div>
             </div>
         </header>
 
         <div class="content-body">
-            <h1 style="margin-bottom: 20px;">Welcome back, Somchai!</h1>
+            <h1 style="margin-bottom: 20px;">สวัสดี, สมชาย!</h1>
 
-            <h3 style="margin-bottom: 15px;">Leave Quota Summary</h3>
             <div class="quota-grid">
-                <div class="quota-card type-sick">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">Sick Leave</div><small>ลาป่วย</small>
+                            <div style="font-weight:500;">ลาป่วย</div><small>คงเหลือ</small>
                         </div>
-                        <div class="card-icon"><i class="fa-solid fa-bed-pulse"></i></div>
+                        <div class="card-icon" style="background: #0984e3;"><i class="fa-solid fa-notes-medical"></i>
+                        </div>
                     </div>
-                    <div style="font-size:28px; font-weight:600; margin-top:10px;">28 <small>/ 30</small></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 93%;"></div>
-                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;">28 <span
+                            style="font-size:14px; color:#666;">/ 30</span></div>
                 </div>
 
-                <div class="quota-card type-personal">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">Personal</div><small>ลากิจ</small>
+                            <div style="font-weight:500;">ลาพักร้อน</div><small>คงเหลือ</small>
                         </div>
-                        <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="card-icon" style="background: #00b894;"><i class="fa-solid fa-plane"></i></div>
                     </div>
-                    <div style="font-size:28px; font-weight:600; margin-top:10px;">4 <small>/ 6</small></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 66%;"></div>
-                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;">5 <span
+                            style="font-size:14px; color:#666;">/ 10</span></div>
                 </div>
 
-                <div class="quota-card type-vacation">
+                <div class="quota-card">
                     <div style="display:flex; justify-content:space-between;">
                         <div>
-                            <div style="font-weight:500;">Vacation</div><small>พักร้อน</small>
+                            <div style="font-weight:500;">ลากิจ</div><small>คงเหลือ</small>
                         </div>
-                        <div class="card-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <div class="card-icon" style="background: #fdcb6e;"><i class="fa-solid fa-briefcase"></i></div>
                     </div>
-                    <div style="font-size:28px; font-weight:600; margin-top:10px;">5 <small>/ 10</small></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%;"></div>
-                    </div>
-                </div>
-
-                <div class="quota-card type-maternity">
-                    <div style="display:flex; justify-content:space-between;">
-                        <div>
-                            <div style="font-weight:500;">Maternity</div><small>ลาคลอด</small>
-                        </div>
-                        <div class="card-icon"><i class="fa-solid fa-baby-carriage"></i></div>
-                    </div>
-                    <div style="font-size:28px; font-weight:600; margin-top:10px;">98 <small>/ 98</small></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 100%;"></div>
-                    </div>
+                    <div style="font-size:36px; font-weight:600; margin-top:10px;">4 <span
+                            style="font-size:14px; color:#666;">/ 5</span></div>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 20px;">
-                <div class="card" style="flex: 2;">
-                    <h3>Upcoming Leaves (กำหนดการลาเร็วๆ นี้)</h3>
-                    <div
-                        style="margin-top: 15px; padding: 15px; background: #f9f9f9; border-left: 4px solid #f39c12; border-radius: 4px;">
-                        <strong>05 Nov - 06 Nov 2025</strong> (2 Days)<br>
-                        <span style="color:#666;">Vacation Leave - Approved</span>
-                    </div>
-                </div>
-                <div class="card"
-                    style="flex: 1; text-align: center; display: flex; flex-direction: column; justify-content: center;">
-                    <h3>Quick Request</h3>
-                    <p style="color:#888; margin-bottom: 20px;">Need a break?</p>
-                    <a href="request.html" class="btn btn-primary">Apply Now</a>
+            <div class="card">
+                <h3>สถานะคำขอล่าสุด</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ประเภท</th>
+                                <th>วันที่</th>
+                                <th>สถานะ</th>
+                                <th>หมายเหตุ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ลาป่วย</td>
+                                <td>12 พ.ย. 2025</td>
+                                <td><span class="status-badge status-pending">รออนุมัติ</span></td>
+                                <td>ปวดหัว ตัวร้อน</td>
+                            </tr>
+                            <tr>
+                                <td>ลาพักร้อน</td>
+                                <td>20-22 ต.ค. 2025</td>
+                                <td><span class="status-badge status-approved">อนุมัติแล้ว</span></td>
+                                <td>ไปเที่ยวทะเล</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

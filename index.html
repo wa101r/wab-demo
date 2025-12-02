@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Pause - Select Role</title>
+    <title>D-Pause - เลือกบทบาทเข้าใช้งาน</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -14,6 +14,8 @@
             align-items: center;
             min-height: 100vh;
             background-color: var(--bg-color);
+            font-family: 'Sarabun', sans-serif;
+            /* Add Thai font support if available, otherwise fallback */
         }
 
         .role-container {
@@ -76,31 +78,31 @@
 
 <body>
 
-    <h1>Welcome to D-Pause</h1>
+    <h1>ยินดีต้อนรับสู่ D-Pause</h1>
 
     <div class="role-container">
         <a href="Employee/index.html" class="role-card">
             <i class="fa-solid fa-user role-icon"></i>
-            <div class="role-title">Login as Employee</div>
-            <div class="role-desc">View quota, request leave, check status</div>
+            <div class="role-title">เข้าสู่ระบบ: พนักงาน</div>
+            <div class="role-desc">ดูวันลาคงเหลือ, ยื่นใบลา, ตรวจสอบสถานะ</div>
         </a>
 
         <a href="manager/index.html" class="role-card">
             <i class="fa-solid fa-user-tie role-icon"></i>
-            <div class="role-title">Login as Manager</div>
-            <div class="role-desc">Approve requests, view team status</div>
+            <div class="role-title">เข้าสู่ระบบ: หัวหน้างาน</div>
+            <div class="role-desc">อนุมัติคำขอ, ดูภาพรวมทีม</div>
         </a>
 
         <a href="hr/index.html" class="role-card">
             <i class="fa-solid fa-users-gear role-icon"></i>
-            <div class="role-title">Login as HR</div>
-            <div class="role-desc">Manage employees, view reports</div>
+            <div class="role-title">เข้าสู่ระบบ: ฝ่ายบุคคล (HR)</div>
+            <div class="role-desc">จัดการพนักงาน, ดูรายงานสรุป</div>
         </a>
 
         <a href="admin/index.html" class="role-card">
             <i class="fa-solid fa-shield-halved role-icon"></i>
-            <div class="role-title">Login as Admin</div>
-            <div class="role-desc">System settings, user management</div>
+            <div class="role-title">เข้าสู่ระบบ: ผู้ดูแลระบบ</div>
+            <div class="role-desc">ตั้งค่าระบบ, จัดการผู้ใช้งาน</div>
         </a>
     </div>
 

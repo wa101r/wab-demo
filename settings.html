@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ตั้งค่าส่วนตัว - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div style="display: flex; min-height: 100vh; background-color: #f4f6f9;">
+        <!-- Simple Sidebar for Context (or just a back button) -->
+        <aside class="sidebar">
+            <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+            <span class="menu-category">เมนู</span>
+            <a href="javascript:history.back()" class="menu-btn"><i class="fa-solid fa-arrow-left"></i> ย้อนกลับ</a>
+            <a href="index.html" class="menu-btn"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+            <a href="logout.html" class="menu-btn"><i class="fa-solid fa-sign-out-alt"></i> ออกจากระบบ</a>
+        </aside>
+
+        <main class="main-content" style="flex: 1; padding: 20px;">
+            <header class="top-header">
+                <div class="page-title">การตั้งค่าของฉัน</div>
+                <div class="header-right">
+                    <div class="user-info"><strong>ผู้ใช้งาน</strong></div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <h1 style="margin-bottom: 20px;">ตั้งค่าบัญชีผู้ใช้</h1>
+
+                <div class="card">
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bell"></i> การแจ้งเตือน</h3>
+                    <div class="form-group">
+                        <label class="form-label" style="display: flex; align-items: center; gap: 10px;">
+                            <input type="checkbox" checked> แจ้งเตือนทางอีเมล
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" style="display: flex; align-items: center; gap: 10px;">
+                            <input type="checkbox" checked> แจ้งเตือนผ่านเบราว์เซอร์
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" style="display: flex; align-items: center; gap: 10px;">
+                            <input type="checkbox"> แจ้งเตือนทาง SMS
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-globe"></i> ภาษา</h3>
+                    <div class="form-group">
+                        <label class="form-label">เลือกภาษา</label>
+                        <select class="form-control">
+                            <option value="th" selected>ไทย (Thai)</option>
+                            <option value="en">อังกฤษ (English)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-lock"></i> ความปลอดภัย</h3>
+                    <div class="form-group">
+                        <label class="form-label">รหัสผ่านปัจจุบัน</label>
+                        <input type="password" class="form-control" placeholder="********">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">รหัสผ่านใหม่</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">ยืนยันรหัสผ่านใหม่</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">อัปเดตรหัสผ่าน</button>
+                </div>
+
+                <div style="margin-top: 20px; text-align: right;">
+                    <button class="btn btn-primary" style="padding: 10px 20px;">บันทึกการเปลี่ยนแปลง</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ศูนย์ช่วยเหลือ - D-Pause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div style="display: flex; min-height: 100vh; background-color: #f4f6f9;">
+        <aside class="sidebar">
+            <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
+            <span class="menu-category">เมนู</span>
+            <a href="javascript:history.back()" class="menu-btn"><i class="fa-solid fa-arrow-left"></i> ย้อนกลับ</a>
+            <a href="index.html" class="menu-btn"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+        </aside>
+
+        <main class="main-content" style="flex: 1; padding: 20px;">
+            <header class="top-header">
+                <div class="page-title">ศูนย์ช่วยเหลือ</div>
+                <div class="header-right">
+                    <div class="user-info"><strong>ผู้ใช้งาน</strong></div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1>มีอะไรให้เราช่วยไหม?</h1>
+                    <div style="margin-top: 20px;">
+                        <input type="text" placeholder="ค้นหาหัวข้อความช่วยเหลือ..."
+                            style="padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px;">
+                        <button class="btn btn-primary">ค้นหา</button>
+                    </div>
+                </div>
+
+                <div class="quota-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="quota-card" style="cursor: pointer; transition: 0.2s;">
+                        <div class="card-icon" style="background: #0984e3; margin-bottom: 10px;"><i
+                                class="fa-solid fa-file-signature"></i></div>
+                        <h3>วิธีการขอลางาน</h3>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">ขั้นตอนทีละสเต็ปในการส่งคำขอลางาน</p>
+                    </div>
+                    <div class="quota-card" style="cursor: pointer; transition: 0.2s;">
+                        <div class="card-icon" style="background: #00b894; margin-bottom: 10px;"><i
+                                class="fa-solid fa-check-circle"></i></div>
+                        <h3>กระบวนการอนุมัติ</h3>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                            ทำความเข้าใจว่าคำขอของคุณได้รับการอนุมัติอย่างไร</p>
+                    </div>
+                    <div class="quota-card" style="cursor: pointer; transition: 0.2s;">
+                        <div class="card-icon" style="background: #fdcb6e; margin-bottom: 10px;"><i
+                                class="fa-solid fa-calendar-alt"></i></div>
+                        <h3>โควตาวันลา</h3>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">นโยบายเกี่ยวกับวันลาป่วย ลาพักร้อน
+                            และอื่นๆ</p>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 30px;">
+                    <h2>คำถามที่พบบ่อย (FAQ)</h2>
+                    <div style="margin-top: 20px;">
+                        <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                            <summary style="font-weight: 500; cursor: pointer;">ฉันจะรีเซ็ตรหัสผ่านได้อย่างไร?</summary>
+                            <p style="margin-top: 10px; color: #555;">คุณสามารถรีเซ็ตรหัสผ่านได้โดยไปที่หน้า "ตั้งค่า"
+                                และเลือกหัวข้อ "ความปลอดภัย"</p>
+                        </details>
+                        <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                            <summary style="font-weight: 500; cursor: pointer;">ฉันสามารถยกเลิกคำขอลางานได้หรือไม่?
+                            </summary>
+                            <p style="margin-top: 10px; color: #555;">ได้ หากคำขอนั้นยังอยู่ในสถานะ "รออนุมัติ"
+                                คุณสามารถยกเลิกได้จากหน้า "คำขอของฉัน" แต่หากอนุมัติแล้ว โปรดติดต่อ HR</p>
+                        </details>
+                        <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                            <summary style="font-weight: 500; cursor: pointer;">ใครเป็นผู้อนุมัติการลาของฉัน?</summary>
+                            <p style="margin-top: 10px; color: #555;">หัวหน้างานโดยตรงของคุณจะอนุมัติเป็นลำดับแรก
+                                ตามด้วย HR เพื่อตรวจสอบความถูกต้อง</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

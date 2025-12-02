@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>My Profile - D-Pause</title>
+    <title>โปรไฟล์ของฉัน - HR D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <style>
@@ -66,18 +66,6 @@
         .section-title i {
             color: #888;
         }
-
-        .readonly-field {
-            background-color: #f8f9fa;
-            color: #666;
-            cursor: default;
-            border-color: #ddd;
-        }
-
-        .highlight-text {
-            color: #00b894;
-            font-weight: 500;
-        }
     </style>
 </head>
 
@@ -85,29 +73,31 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="approvals-pending.html" class="menu-btn">รออนุมัติ <i class="fa-solid fa-clock"></i></a>
+        <a href="approvals-history.html" class="menu-btn">ประวัติการอนุมัติ <i class="fa-solid fa-history"></i></a>
 
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="approvals.html" class="menu-btn">Approvals <i class="fa-solid fa-check-double"></i></a>
-        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
-        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
-        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
-        <a href="leave-quotas.html" class="menu-btn">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+        <span class="menu-category">การจัดการ</span>
+        <a href="employees.html" class="menu-btn">พนักงาน <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">ประเภทการลา <i class="fa-solid fa-layer-group"></i></a>
+        <a href="leave-quotas.html" class="menu-btn">โควตาวันลา <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="reports.html" class="menu-btn">รายงาน <i class="fa-solid fa-file-invoice"></i></a>
 
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn active">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn active">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">My Profile</div>
+            <div class="page-title">โปรไฟล์ของฉัน</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+                <div class="user-info"><strong>HR Manager</strong><span>ฝ่ายบุคคล</span></div>
             </div>
         </header>
 
@@ -117,36 +107,37 @@
                     <div class="profile-img-container">
                         <img src="https://ui-avatars.com/api/?name=HR+Manager&background=random&size=200" alt="Profile"
                             class="profile-img">
-                        <div class="edit-avatar-btn" title="Change Picture"><i class="fa-solid fa-camera"></i></div>
+                        <div class="edit-avatar-btn" title="เปลี่ยนรูปภาพ"><i class="fa-solid fa-camera"></i></div>
                     </div>
                     <div>
                         <h1 style="margin-bottom: 5px;">HR Manager</h1>
-                        <p style="color: #666; margin-bottom: 10px;">Human Resources</p>
+                        <p style="color: #666; margin-bottom: 10px;">ฝ่ายบุคคล</p>
                         <span class="status-badge"
-                            style="background:#dff9fb; color:#22a6b3; border:1px solid #22a6b3;">Active Employee</span>
+                            style="background:#dff9fb; color:#22a6b3; border:1px solid #22a6b3;">พนักงานประจำ</span>
                     </div>
                 </div>
 
                 <form>
-                    <h3 class="section-title"><i class="fa-regular fa-id-card"></i> Personal Information</h3>
+                    <h3 class="section-title"><i class="fa-regular fa-id-card"></i> ข้อมูลส่วนตัว</h3>
                     <div class="form-row">
                         <div class="form-group" style="flex: 1;">
-                            <label class="form-label">First Name</label>
+                            <label class="form-label">ชื่อจริง</label>
                             <input type="text" class="form-control" value="HR">
                         </div>
                         <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Last Name</label>
+                            <label class="form-label">นามสกุล</label>
                             <input type="text" class="form-control" value="Manager">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Email</label>
+                        <label class="form-label">อีเมล</label>
                         <input type="email" class="form-control" value="hr@d-pause.com" readonly>
                     </div>
 
                     <div style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 15px;">
-                        <button type="button" class="btn" onclick="window.location.reload()">Discard Changes</button>
-                        <button type="button" class="btn btn-primary">Save Profile</button>
+                        <button type="button" class="btn"
+                            onclick="window.location.href='../settings.html'">ไปที่การตั้งค่า</button>
+                        <button type="button" class="btn btn-primary">บันทึกข้อมูล</button>
                     </div>
                 </form>
             </div>

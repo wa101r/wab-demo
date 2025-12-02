@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Profile - D-Pause</title>
+    <title>โปรไฟล์ของฉัน - D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* เพิ่ม Style เฉพาะหน้า Profile ให้ดูเป็นสัดส่วน */
         .profile-header {
             display: flex;
             align-items: center;
@@ -67,18 +66,6 @@
         .section-title i {
             color: #888;
         }
-
-        .readonly-field {
-            background-color: #f8f9fa;
-            color: #666;
-            cursor: default;
-            border-color: #ddd;
-        }
-
-        .highlight-text {
-            color: #00b894;
-            font-weight: 500;
-        }
     </style>
 </head>
 
@@ -86,153 +73,68 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="request.html" class="menu-btn">ยื่นใบลา <i class="fa-solid fa-paper-plane"></i></a>
+        <a href="my-requests.html" class="menu-btn">ประวัติการลา <i class="fa-solid fa-list-check"></i></a>
+        <a href="my-leave.html" class="menu-btn">วันลาคงเหลือ <i class="fa-solid fa-chart-pie"></i></a>
 
-        <span class="menu-category">LEAVE MANAGEMENT</span>
-        <a href="my-leave.html" class="menu-btn">My Leave <i class="fa-solid fa-folder-open"></i></a>
-        <a href="request.html" class="menu-btn">Request Leave <i class="fa-solid fa-leaf"></i></a>
-        <a href="my-requests.html" class="menu-btn">My Requests <i class="fa-solid fa-life-ring"></i></a>
-
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn active">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn active">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">My Profile (ข้อมูลส่วนตัว)</div>
+            <div class="page-title">โปรไฟล์ของฉัน</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>Somchai Jaidee</strong><span>Employee</span></div>
+                <div class="user-info"><strong>สมชาย ใจดี</strong><span>พนักงาน</span></div>
             </div>
         </header>
 
         <div class="content-body">
             <div class="card" style="max-width: 900px; margin: 0 auto;">
-
                 <div class="profile-header">
                     <div class="profile-img-container">
                         <img src="https://ui-avatars.com/api/?name=Somchai+Jaidee&background=random&size=200"
                             alt="Profile" class="profile-img">
-                        <div class="edit-avatar-btn" title="Change Picture"><i class="fa-solid fa-camera"></i></div>
+                        <div class="edit-avatar-btn" title="เปลี่ยนรูปภาพ"><i class="fa-solid fa-camera"></i></div>
                     </div>
                     <div>
-                        <h1 style="margin-bottom: 5px;">Somchai Jaidee</h1>
-                        <p style="color: #666; margin-bottom: 10px;">Software Engineer (Senior)</p>
+                        <h1 style="margin-bottom: 5px;">สมชาย ใจดี</h1>
+                        <p style="color: #666; margin-bottom: 10px;">พนักงาน</p>
                         <span class="status-badge"
-                            style="background:#dff9fb; color:#22a6b3; border:1px solid #22a6b3;">Active Employee</span>
+                            style="background:#dff9fb; color:#22a6b3; border:1px solid #22a6b3;">พนักงานประจำ</span>
                     </div>
                 </div>
 
                 <form>
-                    <h3 class="section-title"><i class="fa-regular fa-id-card"></i> Personal Information</h3>
+                    <h3 class="section-title"><i class="fa-regular fa-id-card"></i> ข้อมูลส่วนตัว</h3>
                     <div class="form-row">
                         <div class="form-group" style="flex: 1;">
-                            <label class="form-label">First Name (TH)</label>
+                            <label class="form-label">ชื่อจริง</label>
                             <input type="text" class="form-control" value="สมชาย">
                         </div>
                         <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Last Name (TH)</label>
+                            <label class="form-label">นามสกุล</label>
                             <input type="text" class="form-control" value="ใจดี">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Nickname</label>
-                            <input type="text" class="form-control" value="ชาย">
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Date of Birth</label>
-                            <input type="date" class="form-control" value="1995-05-20">
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Mobile Phone</label>
-                            <input type="tel" class="form-control" value="081-234-5678">
-                        </div>
-                    </div>
                     <div class="form-group">
-                        <label class="form-label">Current Address</label>
-                        <textarea class="form-control"
-                            rows="2">123/45 Sukhumvit Road, Khlong Toei, Bangkok 10110</textarea>
-                    </div>
-
-                    <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Employment Details <span
-                            style="font-size:12px; color:#888; font-weight:400; margin-left:10px;">(Contact HR to
-                            edit)</span></h3>
-                    <div style="background: #fdfdfd; padding: 20px; border: 1px dashed #ccc; border-radius: 8px;">
-                        <div class="form-row">
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Employee ID</label>
-                                <input type="text" class="form-control readonly-field" value="EMP-2023055" readonly>
-                            </div>
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Email (Company)</label>
-                                <input type="email" class="form-control readonly-field" value="somchai.j@d-pause.com"
-                                    readonly>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Department</label>
-                                <input type="text" class="form-control readonly-field" value="Information Technology"
-                                    readonly>
-                            </div>
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Direct Manager</label>
-                                <input type="text" class="form-control readonly-field" value="Wichai Manager (IT Lead)"
-                                    readonly>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Start Date</label>
-                                <input type="text" class="form-control readonly-field"
-                                    value="01 Jan 2023 (2 Years 10 Months)" readonly>
-                            </div>
-                            <div class="form-group" style="flex: 1;">
-                                <label class="form-label">Employee Type</label>
-                                <input type="text" class="form-control readonly-field" value="Full-time Permanent"
-                                    readonly>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="section-title"><i class="fa-solid fa-kit-medical"></i> Emergency Contact</h3>
-                    <div class="form-row">
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Contact Name</label>
-                            <input type="text" class="form-control" value="Somsri Jaidee">
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Relationship</label>
-                            <select class="form-control">
-                                <option>Spouse (คู่สมรส)</option>
-                                <option>Parent (บิดา/มารดา)</option>
-                                <option>Sibling (พี่น้อง)</option>
-                                <option>Friend (เพื่อน)</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Emergency Phone</label>
-                            <input type="tel" class="form-control" value="089-999-8888">
-                        </div>
-                    </div>
-
-                    <h3 class="section-title"><i class="fa-solid fa-lock"></i> Security</h3>
-                    <div class="form-group">
-                        <label class="form-label">New Password</label>
-                        <input type="password" class="form-control" placeholder="Leave blank to keep current password">
+                        <label class="form-label">อีเมล</label>
+                        <input type="email" class="form-control" value="somchai@d-pause.com" readonly>
                     </div>
 
                     <div style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 15px;">
-                        <button type="button" class="btn" onclick="window.location.reload()">Discard Changes</button>
-                        <button type="button" class="btn btn-primary">Save Profile</button>
+                        <button type="button" class="btn"
+                            onclick="window.location.href='../settings.html'">ไปที่การตั้งค่า</button>
+                        <button type="button" class="btn btn-primary">บันทึกข้อมูล</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </main>

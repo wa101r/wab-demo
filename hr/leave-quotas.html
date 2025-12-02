@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>Leave Quotas - D-Pause</title>
+    <title>โควตาวันลา - HR D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,104 +12,77 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="approvals-pending.html" class="menu-btn">รออนุมัติ <i class="fa-solid fa-clock"></i></a>
+        <a href="approvals-history.html" class="menu-btn">ประวัติการอนุมัติ <i class="fa-solid fa-history"></i></a>
 
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="approvals.html" class="menu-btn">Approvals <i class="fa-solid fa-check-double"></i></a>
-        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
-        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
-        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
-        <a href="leave-quotas.html" class="menu-btn active">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
+        <span class="menu-category">การจัดการ</span>
+        <a href="employees.html" class="menu-btn">พนักงาน <i class="fa-solid fa-users"></i></a>
+        <a href="leave-types.html" class="menu-btn">ประเภทการลา <i class="fa-solid fa-layer-group"></i></a>
+        <a href="leave-quotas.html" class="menu-btn active">โควตาวันลา <i class="fa-solid fa-chart-pie"></i></a>
+        <a href="reports.html" class="menu-btn">รายงาน <i class="fa-solid fa-file-invoice"></i></a>
 
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="notifications.html" class="menu-btn">การแจ้งเตือน <i class="fa-regular fa-bell"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">Leave Quotas</div>
+            <div class="page-title">จัดการโควตาวันลา</div>
             <div class="header-right">
                 <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
+                <div class="user-info"><strong>HR Manager</strong><span>ฝ่ายบุคคล</span></div>
             </div>
         </header>
 
         <div class="content-body">
-
-            <span class="menu-category">MAIN</span>
+            <h1 style="margin-bottom: 20px;">โควตาวันลาพนักงาน</h1>
 
             <div class="card">
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+                    <input type="text" placeholder="ค้นหาพนักงาน..."
+                        style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 250px;">
+                </div>
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Position Level</th>
-                                <th>Sick Leave</th>
-                                <th>Vacation Leave</th>
-                                <th>Personal Leave</th>
-                                <th>Actions</th>
+                                <th>พนักงาน</th>
+                                <th>ลาป่วย (ใช้/เหลือ)</th>
+                                <th>ลาพักร้อน (ใช้/เหลือ)</th>
+                                <th>ลากิจ (ใช้/เหลือ)</th>
+                                <th>ดำเนินการ</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Junior / Entry Level</strong></td>
-                                <td>30 Days</td>
-                                <td>6 Days</td>
-                                <td>3 Days</td>
+                                <td>สมชาย ใจดี</td>
+                                <td>2 / 28</td>
+                                <td>5 / 5</td>
+                                <td>1 / 4</td>
                                 <td>
-                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
-                                            class="fa-solid fa-pen"></i> Edit</button>
+                                    <button class="btn"
+                                        style="padding: 5px 10px; border: 1px solid #ddd;">ปรับปรุง</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>Senior / Specialist</strong></td>
-                                <td>30 Days</td>
-                                <td>10 Days</td>
-                                <td>5 Days</td>
+                                <td>วิไล รักดี</td>
+                                <td>0 / 30</td>
+                                <td>2 / 8</td>
+                                <td>0 / 5</td>
                                 <td>
-                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
-                                            class="fa-solid fa-pen"></i> Edit</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>Manager / Lead</strong></td>
-                                <td>30 Days</td>
-                                <td>15 Days</td>
-                                <td>7 Days</td>
-                                <td>
-                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
-                                            class="fa-solid fa-pen"></i> Edit</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>Executive</strong></td>
-                                <td>30 Days</td>
-                                <td>20 Days</td>
-                                <td>10 Days</td>
-                                <td>
-                                    <button class="btn" style="padding: 5px 10px; border: 1px solid #ddd;"><i
-                                            class="fa-solid fa-pen"></i> Edit</button>
+                                    <button class="btn"
+                                        style="padding: 5px 10px; border: 1px solid #ddd;">ปรับปรุง</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-
-            <h3 style="margin-top: 40px; margin-bottom: 20px;">Individual Adjustments</h3>
-            <div class="card">
-                <div class="form-row" style="margin-bottom: 20px;">
-                    <div style="flex: 1;">
-                        <input type="text" class="form-control" placeholder="Search employee...">
-                    </div>
-                    <button class="btn btn-primary">Search</button>
-                </div>
-                <p style="color: #666; text-align: center; padding: 20px;">Search for an employee to adjust their
-                    specific quota.</p>
             </div>
         </div>
     </main>

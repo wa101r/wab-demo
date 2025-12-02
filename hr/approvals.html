@@ -1,101 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>HR Approvals - D-Pause</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta http-equiv="refresh" content="0; url=approvals-pending.html">
+    <title>Redirecting...</title>
 </head>
 
 <body>
-    <aside class="sidebar">
-        <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
-
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
-
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="approvals.html" class="menu-btn active">Approvals <i class="fa-solid fa-check-double"></i></a>
-        <a href="reports.html" class="menu-btn">Reports <i class="fa-solid fa-chart-pie"></i></a>
-        <a href="employees.html" class="menu-btn">Employees <i class="fa-solid fa-users"></i></a>
-        <a href="leave-types.html" class="menu-btn">Leave Types <i class="fa-solid fa-list-check"></i></a>
-        <a href="leave-quotas.html" class="menu-btn">Leave Quotas <i class="fa-solid fa-layer-group"></i></a>
-
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="notifications.html" class="menu-btn">Notifications <i class="fa-regular fa-bell"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
-    </aside>
-
-    <main class="main-content">
-        <header class="top-header">
-            <div class="page-title">HR Approvals</div>
-            <div class="header-right">
-                <a href="notifications.html" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>HR Manager</strong><span>Human Resources</span></div>
-            </div>
-        </header>
-
-        <div class="content-body">
-            <h3>Pending HR Approval</h3>
-            <div class="table-container" style="margin-top: 20px;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Employee</th>
-                            <th>Department</th>
-                            <th>Type</th>
-                            <th>Dates</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hrTableBody">
-                        <!-- Dynamic Content -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
-
-    <!-- Details Modal -->
-    <div class="modal-overlay" id="detailsModal">
-        <div class="modal-box">
-            <button class="modal-close" onclick="closeDetailsModal()">&times;</button>
-            <h3 class="modal-title">Request Details</h3>
-            <div class="modal-body" id="detailsContent">
-                <!-- Dynamic Details -->
-            </div>
-            <div class="modal-footer">
-                <button class="btn" onclick="closeDetailsModal()">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Reject Modal -->
-    <div class="modal-overlay" id="rejectModal">
-        <div class="modal-box">
-            <button class="modal-close" onclick="closeRejectModal()">&times;</button>
-            <h3 class="modal-title" style="color: #ff4d4d;">Reject Request</h3>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label class="form-label">Reason for Rejection</label>
-                    <textarea id="rejectReason" class="form-control" rows="4"
-                        placeholder="Please specify why this request is being rejected..."></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" onclick="closeRejectModal()">Cancel</button>
-                <button class="btn" style="background: #ff4d4d; color: white; border: none;"
-                    onclick="confirmReject()">Confirm Reject</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/script.js"></script>
+    <p>กำลังนำทางไปยัง <a href="approvals-pending.html">หน้าอนุมัติคำขอ</a>...</p>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
-    <title>System Logs - D-Pause</title>
+    <title>ประวัติการใช้งาน - D-Pause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,63 +12,66 @@
     <aside class="sidebar">
         <div class="brand-box"><i class="fa-solid fa-pause-circle"></i> D-PAUSE</div>
 
-        <span class="menu-category">MAIN</span>
-        <a href="index.html" class="menu-btn">Dashboard <i class="fa-regular fa-clock"></i></a>
-        <a href="../index.html" class="menu-btn">Back to Home <i class="fa-solid fa-house"></i></a>
+        <span class="menu-category">เมนูหลัก</span>
+        <a href="index.html" class="menu-btn">แดชบอร์ด <i class="fa-regular fa-clock"></i></a>
+        <a href="../index.html" class="menu-btn">กลับหน้าหลัก <i class="fa-solid fa-house"></i></a>
 
-        <span class="menu-category">MANAGEMENT</span>
-        <a href="all-requests.html" class="menu-btn">All Requests <i class="fa-solid fa-list-check"></i></a>
-        <a href="users.html" class="menu-btn">Users <i class="fa-solid fa-users-gear"></i></a>
-        <a href="org-structure.html" class="menu-btn">Org Structure <i class="fa-solid fa-sitemap"></i></a>
-        <a href="settings.html" class="menu-btn">Settings <i class="fa-solid fa-sliders"></i></a>
-        <a href="logs.html" class="menu-btn active">Audit Logs <i class="fa-solid fa-list-ol"></i></a>
+        <span class="menu-category">การจัดการ</span>
+        <a href="all-requests.html" class="menu-btn">คำขอทั้งหมด <i class="fa-solid fa-list-check"></i></a>
+        <a href="attendance.html" class="menu-btn">การลงเวลา <i class="fa-solid fa-clipboard-user"></i></a>
+        <a href="users.html" class="menu-btn">ผู้ใช้งาน <i class="fa-solid fa-users-gear"></i></a>
+        <a href="org-structure.html" class="menu-btn">โครงสร้างองค์กร <i class="fa-solid fa-sitemap"></i></a>
+        <a href="settings.html" class="menu-btn">ตั้งค่าระบบ <i class="fa-solid fa-sliders"></i></a>
+        <a href="logs.html" class="menu-btn active">ประวัติการใช้งาน <i class="fa-solid fa-list-ol"></i></a>
 
-        <span class="menu-category">GENERAL</span>
-        <a href="calendar.html" class="menu-btn">Calendar <i class="fa-regular fa-calendar"></i></a>
-        <a href="profile.html" class="menu-btn">Profile <i class="fa-regular fa-user"></i></a>
+        <span class="menu-category">ทั่วไป</span>
+        <a href="calendar.html" class="menu-btn">ปฏิทิน <i class="fa-regular fa-calendar"></i></a>
+        <a href="profile.html" class="menu-btn">โปรไฟล์ <i class="fa-regular fa-user"></i></a>
+        <a href="../logout.html" class="menu-btn" style="margin-top: auto; color: #e74c3c;">ออกจากระบบ <i
+                class="fa-solid fa-sign-out-alt"></i></a>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="page-title">System Activity Logs</div>
+            <div class="page-title">ประวัติกิจกรรมของระบบ</div>
             <div class="header-right">
                 <a href="#" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
-                <div class="user-info"><strong>System Admin</strong><span>Administrator</span></div>
+                <div class="user-info"><strong>System Admin</strong><span>ผู้ดูแลระบบ</span></div>
             </div>
         </header>
 
         <div class="content-body">
-            <h1 style="margin-bottom: 20px;">System Activity Logs</h1>
+            <h1 style="margin-bottom: 20px;">ประวัติกิจกรรมของระบบ</h1>
 
             <div class="card">
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Timestamp</th>
-                                <th>User</th>
-                                <th>Action</th>
-                                <th>Details</th>
+                                <th>เวลา</th>
+                                <th>ผู้ใช้งาน</th>
+                                <th>การกระทำ</th>
+                                <th>รายละเอียด</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>01 Dec 2025 10:30:00</td>
+                                <td>01 ธ.ค. 2025 10:30:00</td>
                                 <td>System Admin</td>
-                                <td>Login</td>
-                                <td>Successful login from IP 192.168.1.1</td>
+                                <td>เข้าสู่ระบบ</td>
+                                <td>เข้าสู่ระบบสำเร็จจาก IP 192.168.1.1</td>
                             </tr>
                             <tr>
-                                <td>01 Dec 2025 09:15:22</td>
-                                <td>Somchai Jaidee</td>
-                                <td>Request Leave</td>
-                                <td>Created Sick Leave request (ID: 1023)</td>
+                                <td>01 ธ.ค. 2025 09:15:22</td>
+                                <td>สมชาย ใจดี</td>
+                                <td>ขอลางาน</td>
+                                <td>สร้างคำขอลาป่วย (ID: 1023)</td>
                             </tr>
                             <tr>
-                                <td>30 Nov 2025 16:45:10</td>
-                                <td>Manager Name</td>
-                                <td>Approve Request</td>
-                                <td>Approved Leave Request (ID: 1020)</td>
+                                <td>30 พ.ย. 2025 16:45:10</td>
+                                <td>ชื่อผู้จัดการ</td>
+                                <td>อนุมัติคำขอ</td>
+                                <td>อนุมัติคำขอลางาน (ID: 1020)</td>
                             </tr>
                         </tbody>
                     </table>
